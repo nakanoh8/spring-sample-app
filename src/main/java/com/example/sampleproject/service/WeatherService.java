@@ -15,7 +15,7 @@ public class WeatherService{
   WeatherRepository weatherRepository;
   
   /**
-   * レコードを全件取得する。
+   * レコードを全件取得する。//////
    * @return
    */
   public List<Weather> findAllWeatherData(){
