@@ -22,4 +22,14 @@ public class WeatherService{
     
     return weatherRepository.findAll();
   }
+
+  /**
+   * 指定した都市のレコードを取得する。
+   * @param name
+   * @return
+   */
+  public List<Weather> findWetherDataListByName(String name){
+        
+    return weatherRepository.findByName(name);
+  }
 }
