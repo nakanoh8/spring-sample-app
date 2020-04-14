@@ -21,16 +21,16 @@ public class SampleController {
     @Autowired
     WeatherService weatherService;
     
-    @RequestMapping("/hello")
-    public String hello(Model model) {
+    @RequestMapping("/sample_sample")
+    public String sample(Model model) {
     
-    model.addAttribute("hello", "Hello World!"); // Hello World!の表示
+    model.addAttribute("sample", "Hello World!"); // Hello World!の表示
     
     // 気象データの取得
     List<Weather> weatherDataList = weatherService.findAllWeatherData();
     model.addAttribute("weatherDataList", weatherDataList);
     
-    return "hello";
+    return "sample";
   }
 
 }
