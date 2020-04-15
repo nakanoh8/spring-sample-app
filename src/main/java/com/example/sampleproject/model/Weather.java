@@ -8,6 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="weather")
 public class Weather {
@@ -17,12 +20,14 @@ public class Weather {
     
     private Integer location_id;
     
+    @JsonIgnore
     private String name;
     
     private Integer temperature;
     
     private Integer humidity;
     
+    @JsonFormat(pattern = "yyyy/MM/dd HH:mm:ss")
     private Timestamp date_time;
     
   public Integer getId() {
@@ -38,7 +43,7 @@ public class Weather {
     this.location_id = location_id;
   }
     
-        public String getName() {
+  public String getName() {
     return name;
   }
   public void setName(String name) {
