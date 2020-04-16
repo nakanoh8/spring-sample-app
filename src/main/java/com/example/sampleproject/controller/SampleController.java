@@ -18,7 +18,6 @@ import com.example.sampleproject.model.Weather;
 import com.example.sampleproject.service.WeatherService;
 
 @Controller
-@ResponseBody // ←ポイントです！！
 public class SampleController {
     // @RequestMapping("/sample")
     // public String sample() {
@@ -60,21 +59,4 @@ public class SampleController {
         
         return "sample";
     }
-
-    /**
-	 * Weather情報json返却
-	 */
-	@RequestMapping(value = "/GetWeather", method = { RequestMethod.GET})
-	// public ResponseEntity<List<Weather>> Index(@RequestParam("Key") Optional<String> key){ // ←ポイントです
-    public ResponseEntity<List<Weather>> Index(){
-		// Hogeテーブルのデータ取得
-		List<Weather> weatherDataList = null;
-		// if(key.isPresent()) {
-		// 	weatherDataList = weatherService.findAllWeatherData();
-        // }
-        weatherDataList = weatherService.findAllWeatherData();
- 
-		return ResponseEntity.ok(weatherDataList);// ←ポイントです！！
-	}
-
 }
