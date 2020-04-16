@@ -5,6 +5,7 @@
   <title></title>
 </head>
 
+<script type="text/javascript" th:src="@{/js/jquery-3.5.0.min.js}"></script>
 <script type="text/javascript" th:src="@{/js/sample.js}"></script>
 
 <body onload="loadJson()">
@@ -13,8 +14,8 @@
 </p> -->
 <iframe id="iframe_id" src="" frameborder="1"></iframe>
 <p id="p_id"></p>
-<textarea name="" id="ta_id" cols="30" rows="10" value="aaaaaaa"></textarea>
-  <!-- <table>
+
+<!-- <table>
     <tr th:each="data : ${weatherDataList}" th:object="${data}">
       <td th:text="*{id}"></td>
       <td th:text="*{location_id}"></td>
@@ -25,7 +26,7 @@
     </tr>
   </table> -->
 
-  <p>東京のデータ</p>
+  <!-- <p>東京のデータ</p> -->
   <!-- <table>
     <tr th:each="data : ${weatherDataTokyo}" th:object="${data}">
       <td th:text="*{id}"></td>
@@ -37,7 +38,7 @@
     </tr>
   </table> -->
   
-  <p>那覇のデータ</p>
+  <!-- <p>那覇のデータ</p> -->
   <!-- <table>
     <tr th:each="data : ${weatherDataNaha}" th:object="${data}">
       <td th:text="*{id}"></td>
