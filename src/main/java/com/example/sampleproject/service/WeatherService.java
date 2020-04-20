@@ -4,6 +4,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
+
 import com.example.sampleproject.model.Weather;
 import com.example.sampleproject.repository.WeatherRepository;
 
@@ -32,4 +34,11 @@ public class WeatherService{
         
     return weatherRepository.findByName(name);
   }
+
+  public String greeting(String greet) {
+    if (StringUtils.isEmpty(greet)) {
+        return "Say something...";
+    }
+    return "hello";
+}
 }

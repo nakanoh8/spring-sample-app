@@ -18,6 +18,7 @@ import com.example.sampleproject.model.Weather;
 import com.example.sampleproject.service.WeatherService;
 
 @Controller
+@RequestMapping("/sample")
 public class SampleController {
     // @RequestMapping("/sample")
     // public String sample() {
